@@ -25,6 +25,8 @@
     <Compile Include="resource.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="browser.ui" />
+    <Content Include="compile-command.txt" />
     <Content Include="icons\cancel-music.png" />
     <Content Include="icons\home.png" />
     <Content Include="icons\left-arrow.png" />
@@ -33,6 +35,7 @@
     <Content Include="icons\right-arrow.png" />
     <Content Include="icons\search.png" />
     <Content Include="icons\star.png" />
+    <Content Include="resource.qrc" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="icons" />
