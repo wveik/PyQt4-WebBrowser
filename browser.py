@@ -29,13 +29,13 @@ class Ui_MainWindow(object):
     default_url = "http://www.ntk-intourist.ru/"
 
     def back(self):
-        print('Back')
+        self.webView.back()
 
     def forward(self):
-        print('forward')
+        self.webView.forward()
 
     def reload(self):
-        print('reload')
+        self.webView.reload()
 
     def goAddress(self):
         url = self.ln_addressbar.text() if self.ln_addressbar.text() else self.default_url
@@ -43,7 +43,9 @@ class Ui_MainWindow(object):
         self.webView.show()
 
     def home(self):
-        print('home')
+        url = self.default_url
+        self.webView.load(QtCore.QUrl(url))
+        self.webView.show()
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
