@@ -68,6 +68,7 @@ class Ui_MainWindow(object):
         self.rb_reload.setObjectName(_fromUtf8("rb_reload"))
         ################## Event - Возврат
         self.rb_reload.clicked.connect(self.reload)
+        QtGui.QShortcut(QtGui.QKeySequence("F5"), self.rb_reload, self.reload)
         ################## End Event
         self.tb_forward = QtGui.QToolButton(self.centralwidget)
         self.tb_forward.setGeometry(QtCore.QRect(110, 10, 41, 31))
