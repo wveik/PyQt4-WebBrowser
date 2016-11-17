@@ -26,6 +26,8 @@ except AttributeError:
 
 class Ui_MainWindow(object):
 
+    default_url = "http://www.ntk-intourist.ru/"
+
     def back(self):
         print('Back')
 
@@ -36,7 +38,9 @@ class Ui_MainWindow(object):
         print('reload')
 
     def goAddress(self):
-        print('goAddress')
+        url = self.ln_addressbar.text() if self.ln_addressbar.text() else self.default_url
+        self.webView.load(QtCore.QUrl(url))
+        self.webView.show()
 
     def home(self):
         print('home')
